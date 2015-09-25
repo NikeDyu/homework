@@ -1,15 +1,12 @@
-fib = Array.new(100, 0)
+fib = []
 
-fib[1] = 1
+i = 0
 
-index = 2
+while i <= 100
 
-while index <= 100
+	fib[i] = i == 0 ? 0 : i == 1 ? 1 : fib[i - 1] + fib[i - 2]
 
-	fib[index] = fib[index - 1] + fib[index - 2]
-
-	index += 1
-
+	i += 1
 end
 
-puts fib
+puts fib.inspect

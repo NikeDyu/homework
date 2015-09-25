@@ -1,11 +1,16 @@
-alphabet = ('А' .. 'Я').to_a
+alphabet = %w(А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф
+	Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я) # В ('А'..'Я') - нет буквы Ё!
 
-voises = ['А', 'Е', 'И', 'О', 'У', 'Э', 'Ю', 'Я']
+voises = %w(А Е Ё И О У Ы Э Ю Я)
+
+hash = {}
 
 voises.each do |letter|
 
 	if alphabet.include?(letter)
-		hash = {letter => alphabet.endex(letter)}
+
+		hash[letter] = alphabet.index(letter) + 1
+
 	end
 end
 
